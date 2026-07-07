@@ -1,0 +1,385 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Luckiest Lottery Numbers — 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e1f1b; --bg2:#0a1714; --panel:#15302a; --panel2:#1b3a32;
+    --line:#2b4a41; --ink:#edf0e7; --muted:#83998e; --muted2:#5f7a70;
+    --ballface:#f6f3e9; --balltext:#1c211d;
+    --pb:#e0453f; --mm:#f0c04a;
+    --lucky:#f2a516; --avg:#c9c2ac; --unlucky:#3f8494;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:radial-gradient(1200px 700px at 70% -10%,#173a32 0%,var(--bg) 55%,var(--bg2) 100%);
+    color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .mono{font-family:"IBM Plex Mono",monospace}
+  h1,h2,h3{font-family:"Space Grotesk",sans-serif;font-weight:700;line-height:1.05;margin:0}
+  a{color:inherit}
+
+  /* HERO */
+  header{padding:76px 0 30px}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--mm);margin-bottom:18px}
+  h1{font-size:clamp(38px,7vw,74px);letter-spacing:-.02em}
+  h1 .em{color:var(--lucky)}
+  .lede{max-width:640px;margin:22px 0 0;font-size:clamp(16px,2vw,19px);color:#cdd8d0}
+  .lede b{color:var(--ink);font-weight:600}
+
+  /* DEBUNK */
+  .debunk{margin:52px 0 10px;background:linear-gradient(180deg,var(--panel) 0%,var(--panel2) 100%);
+    border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px 34px}
+  .debunk h2{font-size:clamp(21px,3vw,27px);letter-spacing:-.01em}
+  .debunk p.sub{color:var(--muted);margin:10px 0 26px;max-width:660px}
+  .track{position:relative;height:70px;margin:8px 0 4px;border-radius:10px;
+    background:linear-gradient(90deg,rgba(63,132,148,.16),rgba(201,194,172,.10),rgba(242,165,22,.16));
+    border:1px solid var(--line)}
+  .track .end{position:absolute;bottom:6px;font-family:"IBM Plex Mono",monospace;font-size:10px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted2);z-index:1}
+  .track .end.l{left:2px}.track .end.r{right:2px}
+  .tracklabel{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink);
+    margin:26px 0 4px;display:flex;align-items:center;gap:9px}
+  .tracklabel .tag{font-size:10px;padding:2px 8px;border-radius:100px;letter-spacing:.08em;text-transform:uppercase}
+  .tag.bad{background:rgba(224,69,63,.16);color:#f19a96;border:1px solid rgba(224,69,63,.4)}
+  .tag.good{background:rgba(242,165,22,.14);color:var(--lucky);border:1px solid rgba(242,165,22,.4)}
+  .track .miniball{position:absolute;top:50%;width:clamp(28px,5.5vw,34px);height:clamp(28px,5.5vw,34px);
+    transform:translate(-50%,-50%);transition:left .35s ease,opacity .45s ease,transform .45s ease;
+    font-size:clamp(11px,2.4vw,13px);z-index:2}
+  .debunk .read{margin-top:26px;color:#cdd8d0;font-size:15px;max-width:680px}
+  .debunk .read b{color:var(--lucky);font-weight:600}
+
+  /* BALL */
+  .ball{border-radius:50%;display:grid;place-items:center;font-family:"Space Grotesk",sans-serif;
+    font-weight:700;color:var(--balltext);position:relative;flex:none;
+    background:radial-gradient(circle at 32% 28%,#ffffff 0%,var(--ballface) 46%,#d9d4c4 100%);
+    box-shadow:inset -3px -4px 7px rgba(0,0,0,.22),0 3px 7px rgba(0,0,0,.34)}
+  .ball.pb{background:radial-gradient(circle at 32% 28%,#ff8a86 0%,var(--pb) 48%,#a72420 100%);color:#fff}
+  .ball.mm{background:radial-gradient(circle at 32% 28%,#ffe39a 0%,var(--mm) 50%,#b98a1c 100%);color:#3a2c05}
+
+  /* SECTION SHELL */
+  section{padding:56px 0}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--mm);margin-bottom:12px}
+  h2.big{font-size:clamp(26px,4vw,38px);letter-spacing:-.02em}
+  .note{color:var(--muted);max-width:660px;margin:12px 0 0}
+
+  /* CONTROLS */
+  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:28px 0 8px}
+  .seg{display:inline-flex;background:var(--panel);border:1px solid var(--line);border-radius:100px;padding:4px}
+  .seg button{background:none;border:none;color:var(--muted);font-family:"IBM Plex Mono",monospace;
+    font-size:12.5px;letter-spacing:.03em;padding:8px 15px;border-radius:100px;cursor:pointer;transition:.18s}
+  .seg button[aria-pressed=true]{background:var(--lucky);color:#231a05;font-weight:600}
+  .seg button:focus-visible{outline:2px solid var(--mm);outline-offset:2px}
+  .segtitle{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted2);margin-right:2px}
+
+  /* BEST TICKET */
+  .tickets{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  .ticket{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px}
+  .ticket h3{font-size:19px;display:flex;align-items:center;gap:10px}
+  .dot{width:11px;height:11px;border-radius:50%}
+  .dot.pb{background:var(--pb)}.dot.mm{background:var(--mm)}
+  .ticket .row{display:flex;gap:11px;margin-top:20px;flex-wrap:wrap;align-items:center}
+  .ticket .plus{color:var(--muted2);font-size:22px;font-weight:300}
+  .ticket .cap{margin-top:16px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted)}
+
+  /* GRID */
+  .legend{display:flex;align-items:center;gap:14px;margin:22px 0 18px;flex-wrap:wrap;
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted)}
+  .scale{height:11px;width:180px;border-radius:100px;
+    background:linear-gradient(90deg,var(--unlucky),var(--avg),var(--lucky))}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(50px,1fr));gap:11px;margin-top:6px}
+  .grid .ball{aspect-ratio:1;width:100%;font-size:clamp(14px,2.4vw,18px);cursor:default;
+    transition:transform .15s}
+  .grid .ball:hover,.grid .ball:focus-visible{transform:scale(1.12);outline:none;z-index:3}
+  .grid .ball .idx{position:absolute;bottom:-6px;right:-4px;font-family:"IBM Plex Mono",monospace;
+    font-size:9px;font-weight:600;background:var(--bg2);color:var(--muted);border:1px solid var(--line);
+    border-radius:100px;padding:1px 5px}
+  .grid .ball.rankTop{box-shadow:inset -3px -4px 7px rgba(0,0,0,.22),0 0 0 2px var(--lucky),0 3px 9px rgba(0,0,0,.4)}
+  .grid .ball.rankBot{box-shadow:inset -3px -4px 7px rgba(0,0,0,.22),0 0 0 2px var(--unlucky),0 3px 9px rgba(0,0,0,.4)}
+  .tip{position:fixed;pointer-events:none;z-index:50;background:#04100d;border:1px solid var(--line);
+    border-radius:9px;padding:9px 12px;font-family:"IBM Plex Mono",monospace;font-size:12px;
+    color:var(--ink);opacity:0;transform:translateY(4px);transition:.12s;max-width:210px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+  .tip.on{opacity:1;transform:none}
+  .tip .big{font-size:15px;color:var(--lucky);font-weight:600}
+  .tip .u{color:var(--unlucky)}
+  .warnbar{margin-top:20px;background:rgba(224,69,63,.09);border:1px solid rgba(224,69,63,.32);
+    border-radius:10px;padding:14px 16px;color:#f0b0ac;font-size:14px;display:none}
+  .warnbar.show{display:block}
+  .warnbar b{color:#fff}
+
+  /* CALLOUTS */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:26px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .card .n{font-family:"Space Grotesk",sans-serif;font-size:44px;font-weight:700;line-height:1;color:var(--lucky)}
+  .card .n.u{color:var(--unlucky)}
+  .card p{margin:12px 0 0;font-size:14.5px;color:#cdd8d0}
+  .card p b{color:var(--ink)}
+  .card .meta{margin-top:12px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted2)}
+
+  /* METHOD + FOOT */
+  .method{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px}
+  .method h3{font-size:20px;margin-bottom:8px}
+  .method ol{margin:16px 0 0;padding-left:20px;color:#cdd8d0}
+  .method li{margin:9px 0}
+  .method code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--bg2);
+    padding:2px 6px;border-radius:5px;color:var(--mm)}
+  .disc{margin-top:30px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:12.5px;
+    letter-spacing:.06em;color:var(--muted);border-top:1px solid var(--line);padding:26px 0 60px}
+  .disc b{color:var(--ink)}
+
+  @media(max-width:640px){
+    .tickets{grid-template-columns:1fr}
+    header{padding:52px 0 20px}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Powerball &amp; Mega Millions · 2026 refresh</div>
+    <h1>The luckiest numbers,<br>measured <span class="em">fairly</span>.</h1>
+    <p class="lede">Older lottery numbers look luckier for a boring reason: they've simply been in the game longer. We rank by <b>how often a number hits per chance it actually had</b> — so a number that joined in 2015 competes on equal footing with one from 1997.</p>
+  </header>
+
+  <div class="debunk">
+    <h2>Scored on the chances they actually had</h2>
+    <p class="sub">Each number is judged only on the draws it was eligible for — so a number that joined the game in 2015 stands on equal footing with one from decades earlier. Here are Powerball's ten newest white balls (60–69) placed among all 69 by draw rate.</p>
+
+    <div class="tracklabel">Where the ten newest balls (60–69) rank among all 69</div>
+    <div class="track" id="trackRate">
+      <span class="end l">Luckiest</span><span class="end r">Unluckiest</span>
+    </div>
+
+    <p class="read">On a fair, per-chance basis these newest numbers land <b>all across the board</b> — most of them sitting close to average, a couple among the very luckiest.</p>
+  </div>
+
+  <section id="ticket">
+    <div class="kicker">The best possible ticket</div>
+    <h2 class="big">If luck were a strategy</h2>
+    <p class="note">The five hottest white balls plus the hottest special ball for each game. (It isn't a strategy — see the fine print — but it's a fun ticket.)</p>
+    <div class="controls">
+      <span class="segtitle">View</span>
+      <div class="seg" id="cutSeg" role="group" aria-label="Choose time window">
+        <button data-cut="A_current_matrix" aria-pressed="true">Current game</button>
+        <button data-cut="B_full_history" aria-pressed="false">All-time</button>
+      </div>
+    </div>
+    <div class="tickets" id="tickets"></div>
+  </section>
+
+  <section id="grid">
+    <div class="kicker">Every number, ranked</div>
+    <h2 class="big">The heat board</h2>
+    <p class="note">Warm balls hit more often than average, cool balls less. The ring marks the three luckiest and three unluckiest. Tap or hover any ball for its numbers.</p>
+    <div class="controls">
+      <span class="segtitle">Game</span>
+      <div class="seg" id="poolSeg" role="group" aria-label="Choose pool">
+        <button data-pool="pb_white" aria-pressed="true">PB white</button>
+        <button data-pool="pb_red" aria-pressed="false">Powerball</button>
+        <button data-pool="mm_white" aria-pressed="false">MM white</button>
+        <button data-pool="mm_mb" aria-pressed="false">Mega Ball</button>
+      </div>
+    </div>
+    <div class="legend">
+      <span>less than average</span>
+      <span class="scale"></span>
+      <span>more than average</span>
+      <span style="margin-left:auto">1.00 = an average number</span>
+    </div>
+    <div class="grid" id="heat"></div>
+    <div class="warnbar" id="warn"><b>Small-sample warning.</b> The current-game Mega Ball is based on only 130 draws since April 2025 — about 5 hits expected per number. This ranking is noise, not signal. Use the all-time view for anything meaningful.</div>
+  </section>
+
+  <section id="callouts">
+    <div class="kicker">For the write-up</div>
+    <h2 class="big">Headline numbers</h2>
+    <p class="note">Current-game figures. Percentages are how much more or less often a number hits versus an average one.</p>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section id="how">
+    <div class="kicker">How we did it</div>
+    <h2 class="big">The method, briefly</h2>
+    <div class="method" style="margin-top:22px">
+      <h3>How the ranking works</h3>
+      <ol>
+        <li>We collected every official draw for both games with a Python scraper — Powerball back to 1997, Mega Millions back to 2010.</li>
+        <li>Both games have changed their number pools over the years (Powerball's whites went 49 → 53 → 55 → 59 → <b>69</b>). Since a number can't be drawn before it exists, we count each number only over the draws it was actually in the pool for.</li>
+        <li>For each number we compute <code>draw rate = times drawn ÷ draws it was eligible for</code>, then a <code>luck score</code> where <code>1.00</code> is exactly average.</li>
+        <li>We show two views: the <b>current game</b> (headline, everyone equally eligible) and <b>all-time</b> (still by rate, so eras don't distort it).</li>
+        <li>White balls and the special ball are always counted as separate pools. The retired Mega Ball 25 is shown separately, never ranked against today's 1–24.</li>
+      </ol>
+    </div>
+    <p class="disc"><b>Scorecard, not strategy.</b> &nbsp;Lottery draws are random and past results never predict future ones. This is a record of what happened — entertainment, not a system. &nbsp;Correct as of the latest draws: Powerball 2026-07-01, Mega Millions 2026-07-03.</p>
+  </section>
+</div>
+
+<div class="tip" id="tip"></div>
+
+<script>
+const DATA = {"pb_white": {"A_current_matrix": [[21, 123, 0.0895, 1.234, 1], [61, 123, 0.0895, 1.234, 2], [64, 121, 0.088, 1.214, 3], [28, 119, 0.0865, 1.194, 4], [23, 116, 0.0844, 1.164, 5], [27, 116, 0.0844, 1.164, 6], [32, 116, 0.0844, 1.164, 7], [33, 115, 0.0836, 1.154, 8], [36, 114, 0.0829, 1.144, 9], [63, 114, 0.0829, 1.144, 10], [69, 113, 0.0822, 1.134, 11], [53, 112, 0.0815, 1.124, 12], [62, 112, 0.0815, 1.124, 13], [47, 111, 0.0807, 1.114, 14], [3, 110, 0.08, 1.104, 15], [16, 109, 0.0793, 1.094, 16], [37, 109, 0.0793, 1.094, 17], [52, 109, 0.0793, 1.094, 18], [39, 108, 0.0785, 1.084, 19], [59, 108, 0.0785, 1.084, 20], [44, 107, 0.0778, 1.074, 21], [6, 105, 0.0764, 1.054, 22], [12, 103, 0.0749, 1.034, 23], [18, 102, 0.0742, 1.024, 24], [19, 102, 0.0742, 1.024, 25], [20, 100, 0.0727, 1.004, 26], [40, 100, 0.0727, 1.004, 27], [66, 100, 0.0727, 1.004, 28], [67, 100, 0.0727, 1.004, 29], [2, 99, 0.072, 0.994, 30], [30, 99, 0.072, 0.994, 31], [31, 99, 0.072, 0.994, 32], [45, 99, 0.072, 0.994, 33], [11, 98, 0.0713, 0.984, 34], [24, 98, 0.0713, 0.984, 35], [43, 98, 0.0713, 0.984, 36], [56, 98, 0.0713, 0.984, 37], [50, 97, 0.0705, 0.974, 38], [68, 97, 0.0705, 0.974, 39], [17, 96, 0.0698, 0.963, 40], [57, 96, 0.0698, 0.963, 41], [42, 95, 0.0691, 0.953, 42], [54, 95, 0.0691, 0.953, 43], [4, 94, 0.0684, 0.943, 44], [7, 94, 0.0684, 0.943, 45], [60, 94, 0.0684, 0.943, 46], [1, 93, 0.0676, 0.933, 47], [15, 93, 0.0676, 0.933, 48], [38, 93, 0.0676, 0.933, 49], [58, 93, 0.0676, 0.933, 50], [8, 92, 0.0669, 0.923, 51], [10, 92, 0.0669, 0.923, 52], [9, 91, 0.0662, 0.913, 53], [14, 91, 0.0662, 0.913, 54], [35, 91, 0.0662, 0.913, 55], [22, 90, 0.0655, 0.903, 56], [41, 90, 0.0655, 0.903, 57], [51, 90, 0.0655, 0.903, 58], [55, 90, 0.0655, 0.903, 59], [5, 89, 0.0647, 0.893, 60], [29, 89, 0.0647, 0.893, 61], [48, 89, 0.0647, 0.893, 62], [65, 88, 0.064, 0.883, 63], [25, 87, 0.0633, 0.873, 64], [34, 84, 0.0611, 0.843, 65], [46, 81, 0.0589, 0.813, 66], [49, 81, 0.0589, 0.813, 67], [26, 80, 0.0582, 0.803, 68], [13, 75, 0.0545, 0.753, 69]], "B_full_history": [[32, 306, 0.0943, 1.124, 1], [16, 295, 0.0909, 1.084, 2], [39, 295, 0.0909, 1.084, 3], [28, 292, 0.09, 1.073, 4], [61, 123, 0.0895, 1.234, 5], [23, 286, 0.0881, 1.051, 6], [64, 121, 0.088, 1.214, 7], [40, 285, 0.0878, 1.047, 8], [45, 285, 0.0878, 1.047, 9], [12, 284, 0.0875, 1.044, 10], [20, 284, 0.0875, 1.044, 11], [36, 284, 0.0875, 1.044, 12], [19, 283, 0.0872, 1.04, 13], [41, 282, 0.0869, 1.036, 14], [27, 279, 0.086, 1.025, 15], [42, 278, 0.0856, 1.021, 16], [30, 277, 0.0853, 1.018, 17], [37, 277, 0.0853, 1.018, 18], [52, 233, 0.0853, 1.061, 19], [14, 274, 0.0844, 1.007, 20], [21, 274, 0.0844, 1.007, 21], [22, 274, 0.0844, 1.007, 22], [2, 272, 0.0838, 0.999, 23], [3, 272, 0.0838, 0.999, 24], [8, 272, 0.0838, 0.999, 25], [5, 271, 0.0835, 0.996, 26], [26, 271, 0.0835, 0.996, 27], [47, 271, 0.0835, 0.996, 28], [63, 114, 0.0829, 1.144, 29], [43, 269, 0.0829, 0.988, 30], [44, 269, 0.0829, 0.988, 31], [48, 269, 0.0829, 0.988, 32], [7, 268, 0.0826, 0.985, 33], [10, 268, 0.0826, 0.985, 34], [31, 268, 0.0826, 0.985, 35], [33, 268, 0.0826, 0.985, 36], [6, 267, 0.0823, 0.981, 37], [17, 267, 0.0823, 0.981, 38], [59, 171, 0.0823, 1.073, 39], [69, 113, 0.0822, 1.134, 40], [9, 266, 0.0819, 0.977, 41], [49, 266, 0.0819, 0.977, 42], [24, 265, 0.0816, 0.974, 43], [62, 112, 0.0815, 1.124, 44], [11, 264, 0.0813, 0.97, 45], [35, 264, 0.0813, 0.97, 46], [15, 262, 0.0807, 0.963, 47], [38, 262, 0.0807, 0.963, 48], [50, 220, 0.0806, 1.002, 49], [18, 261, 0.0804, 0.959, 50], [54, 195, 0.0803, 1.02, 51], [53, 218, 0.0798, 0.993, 52], [13, 258, 0.0795, 0.948, 53], [4, 257, 0.0792, 0.944, 54], [1, 252, 0.0776, 0.926, 55], [34, 252, 0.0776, 0.926, 56], [51, 206, 0.0754, 0.938, 57], [29, 244, 0.0752, 0.897, 58], [55, 182, 0.0749, 0.952, 59], [56, 154, 0.0741, 0.967, 60], [25, 239, 0.0736, 0.878, 61], [46, 239, 0.0736, 0.878, 62], [58, 152, 0.0731, 0.954, 63], [66, 100, 0.0727, 1.004, 64], [67, 100, 0.0727, 1.004, 65], [57, 150, 0.0722, 0.942, 66], [68, 97, 0.0705, 0.974, 67], [60, 94, 0.0684, 0.943, 68], [65, 88, 0.064, 0.883, 69]]}, "pb_red": {"A_current_matrix": [[14, 65, 0.0473, 1.229, 1], [4, 64, 0.0465, 1.21, 2], [21, 63, 0.0458, 1.191, 3], [24, 62, 0.0451, 1.172, 4], [18, 60, 0.0436, 1.135, 5], [20, 59, 0.0429, 1.116, 6], [1, 58, 0.0422, 1.097, 7], [5, 58, 0.0422, 1.097, 8], [25, 58, 0.0422, 1.097, 9], [3, 55, 0.04, 1.04, 10], [9, 55, 0.04, 1.04, 11], [26, 54, 0.0393, 1.021, 12], [2, 53, 0.0385, 1.002, 13], [6, 52, 0.0378, 0.983, 14], [13, 51, 0.0371, 0.964, 15], [19, 50, 0.0364, 0.945, 16], [23, 50, 0.0364, 0.945, 17], [10, 48, 0.0349, 0.908, 18], [11, 48, 0.0349, 0.908, 19], [12, 48, 0.0349, 0.908, 20], [15, 46, 0.0335, 0.87, 21], [22, 46, 0.0335, 0.87, 22], [7, 45, 0.0327, 0.851, 23], [8, 45, 0.0327, 0.851, 24], [17, 43, 0.0313, 0.813, 25], [16, 39, 0.0284, 0.737, 26]], "B_full_history": [[20, 122, 0.0376, 1.222, 1], [14, 120, 0.037, 1.202, 2], [18, 113, 0.0348, 1.132, 3], [37, 51, 0.0344, 1.421, 4], [2, 111, 0.0342, 1.112, 5], [24, 110, 0.0339, 1.102, 6], [6, 108, 0.0333, 1.082, 7], [1, 107, 0.033, 1.072, 8], [25, 107, 0.033, 1.072, 9], [21, 106, 0.0327, 1.062, 10], [5, 105, 0.0323, 1.051, 11], [23, 104, 0.032, 1.041, 12], [4, 102, 0.0314, 1.021, 13], [9, 101, 0.0311, 1.011, 14], [11, 100, 0.0308, 1.001, 15], [26, 100, 0.0308, 1.001, 16], [15, 98, 0.0302, 0.981, 17], [29, 56, 0.0299, 1.192, 18], [13, 97, 0.0299, 0.971, 19], [3, 95, 0.0293, 0.951, 20], [8, 95, 0.0293, 0.951, 21], [17, 95, 0.0293, 0.951, 22], [19, 95, 0.0293, 0.951, 23], [33, 53, 0.0283, 1.128, 24], [10, 89, 0.0274, 0.891, 25], [12, 89, 0.0274, 0.891, 26], [31, 51, 0.0273, 1.086, 27], [7, 88, 0.0271, 0.881, 28], [35, 49, 0.0262, 1.043, 29], [22, 85, 0.0262, 0.851, 30], [36, 38, 0.0256, 1.059, 31], [16, 82, 0.0253, 0.821, 32], [32, 43, 0.023, 0.915, 33], [27, 42, 0.0224, 0.894, 34], [30, 42, 0.0224, 0.894, 35], [39, 33, 0.0223, 0.92, 36], [28, 41, 0.0219, 0.873, 37], [38, 30, 0.0202, 0.836, 38], [34, 36, 0.0192, 0.766, 39], [41, 20, 0.0171, 0.72, 40], [40, 19, 0.0163, 0.684, 41], [42, 18, 0.0154, 0.648, 42]]}, "mm_white": {"A_current_matrix": [[10, 84, 0.0927, 1.298, 1], [17, 81, 0.0894, 1.252, 2], [31, 79, 0.0872, 1.221, 3], [3, 77, 0.085, 1.19, 4], [14, 76, 0.0839, 1.174, 5], [38, 76, 0.0839, 1.174, 6], [42, 76, 0.0839, 1.174, 7], [11, 74, 0.0817, 1.143, 8], [43, 74, 0.0817, 1.143, 9], [8, 73, 0.0806, 1.128, 10], [58, 73, 0.0806, 1.128, 11], [66, 73, 0.0806, 1.128, 12], [18, 72, 0.0795, 1.113, 13], [22, 72, 0.0795, 1.113, 14], [64, 72, 0.0795, 1.113, 15], [20, 71, 0.0784, 1.097, 16], [24, 71, 0.0784, 1.097, 17], [40, 71, 0.0784, 1.097, 18], [46, 70, 0.0773, 1.082, 19], [15, 69, 0.0762, 1.066, 20], [19, 69, 0.0762, 1.066, 21], [26, 68, 0.0751, 1.051, 22], [29, 68, 0.0751, 1.051, 23], [30, 68, 0.0751, 1.051, 24], [33, 68, 0.0751, 1.051, 25], [62, 68, 0.0751, 1.051, 26], [52, 67, 0.074, 1.035, 27], [59, 67, 0.074, 1.035, 28], [16, 66, 0.0728, 1.02, 29], [48, 66, 0.0728, 1.02, 30], [4, 65, 0.0717, 1.004, 31], [13, 65, 0.0717, 1.004, 32], [27, 65, 0.0717, 1.004, 33], [56, 65, 0.0717, 1.004, 34], [6, 64, 0.0706, 0.989, 35], [44, 64, 0.0706, 0.989, 36], [61, 64, 0.0706, 0.989, 37], [39, 63, 0.0695, 0.974, 38], [53, 63, 0.0695, 0.974, 39], [25, 62, 0.0684, 0.958, 40], [37, 62, 0.0684, 0.958, 41], [57, 62, 0.0684, 0.958, 42], [69, 62, 0.0684, 0.958, 43], [70, 62, 0.0684, 0.958, 44], [1, 61, 0.0673, 0.943, 45], [7, 61, 0.0673, 0.943, 46], [21, 61, 0.0673, 0.943, 47], [28, 61, 0.0673, 0.943, 48], [34, 61, 0.0673, 0.943, 49], [63, 61, 0.0673, 0.943, 50], [2, 60, 0.0662, 0.927, 51], [12, 60, 0.0662, 0.927, 52], [32, 59, 0.0651, 0.912, 53], [41, 58, 0.064, 0.896, 54], [47, 58, 0.064, 0.896, 55], [5, 57, 0.0629, 0.881, 56], [9, 57, 0.0629, 0.881, 57], [49, 57, 0.0629, 0.881, 58], [54, 57, 0.0629, 0.881, 59], [55, 57, 0.0629, 0.881, 60], [68, 57, 0.0629, 0.881, 61], [60, 56, 0.0618, 0.865, 62], [35, 55, 0.0607, 0.85, 63], [36, 55, 0.0607, 0.85, 64], [50, 55, 0.0607, 0.85, 65], [23, 54, 0.0596, 0.834, 66], [45, 52, 0.0574, 0.804, 67], [65, 52, 0.0574, 0.804, 68], [67, 52, 0.0574, 0.804, 69], [51, 49, 0.0541, 0.757, 70]], "B_full_history": [[20, 156, 0.091, 1.225, 1], [10, 155, 0.0904, 1.217, 2], [31, 155, 0.0904, 1.217, 3], [17, 152, 0.0887, 1.193, 4], [11, 151, 0.0881, 1.186, 5], [3, 147, 0.0858, 1.154, 6], [38, 142, 0.0828, 1.115, 7], [2, 140, 0.0817, 1.099, 8], [14, 139, 0.0811, 1.091, 9], [24, 139, 0.0811, 1.091, 10], [29, 138, 0.0805, 1.084, 11], [48, 137, 0.0799, 1.076, 12], [18, 136, 0.0793, 1.068, 13], [58, 105, 0.0792, 1.133, 14], [46, 135, 0.0788, 1.06, 15], [66, 104, 0.0784, 1.122, 16], [4, 134, 0.0782, 1.052, 17], [33, 133, 0.0776, 1.044, 18], [42, 132, 0.077, 1.036, 19], [6, 131, 0.0764, 1.029, 20], [53, 131, 0.0764, 1.029, 21], [19, 130, 0.0758, 1.021, 22], [8, 129, 0.0753, 1.013, 23], [15, 129, 0.0753, 1.013, 24], [22, 129, 0.0753, 1.013, 25], [30, 129, 0.0753, 1.013, 26], [16, 128, 0.0747, 1.005, 27], [39, 128, 0.0747, 1.005, 28], [56, 128, 0.0747, 1.005, 29], [12, 127, 0.0741, 0.997, 30], [26, 127, 0.0741, 0.997, 31], [28, 127, 0.0741, 0.997, 32], [41, 127, 0.0741, 0.997, 33], [73, 31, 0.0738, 1.107, 34], [25, 126, 0.0735, 0.989, 35], [35, 125, 0.0729, 0.981, 36], [40, 125, 0.0729, 0.981, 37], [13, 124, 0.0723, 0.974, 38], [27, 124, 0.0723, 0.974, 39], [44, 124, 0.0723, 0.974, 40], [21, 123, 0.0718, 0.966, 41], [43, 123, 0.0718, 0.966, 42], [49, 123, 0.0718, 0.966, 43], [62, 95, 0.0716, 1.025, 44], [74, 30, 0.0714, 1.071, 45], [64, 94, 0.0709, 1.014, 46], [34, 121, 0.0706, 0.95, 47], [45, 121, 0.0706, 0.95, 48], [51, 121, 0.0706, 0.95, 49], [9, 120, 0.07, 0.942, 50], [50, 120, 0.07, 0.942, 51], [52, 120, 0.07, 0.942, 52], [36, 119, 0.0694, 0.934, 53], [37, 118, 0.0688, 0.927, 54], [59, 91, 0.0686, 0.982, 55], [1, 117, 0.0683, 0.919, 56], [32, 117, 0.0683, 0.919, 57], [47, 117, 0.0683, 0.919, 58], [57, 90, 0.0679, 0.971, 59], [23, 116, 0.0677, 0.911, 60], [5, 115, 0.0671, 0.903, 61], [7, 115, 0.0671, 0.903, 62], [54, 114, 0.0665, 0.895, 63], [69, 88, 0.0664, 0.949, 64], [68, 87, 0.0656, 0.938, 65], [63, 86, 0.0649, 0.928, 66], [61, 84, 0.0633, 0.906, 67], [70, 84, 0.0633, 0.906, 68], [55, 103, 0.0601, 0.809, 69], [75, 25, 0.0595, 0.893, 70], [60, 78, 0.0588, 0.841, 71], [65, 75, 0.0566, 0.809, 72], [71, 22, 0.0524, 0.786, 73], [67, 69, 0.052, 0.744, 74], [72, 20, 0.0476, 0.714, 75]]}, "mm_mb": {"A_current_matrix": [[12, 10, 0.0769, 1.846, 1], [7, 9, 0.0692, 1.662, 2], [16, 9, 0.0692, 1.662, 3], [24, 9, 0.0692, 1.662, 4], [1, 7, 0.0538, 1.292, 5], [2, 7, 0.0538, 1.292, 6], [6, 7, 0.0538, 1.292, 7], [9, 6, 0.0462, 1.108, 8], [10, 6, 0.0462, 1.108, 9], [3, 5, 0.0385, 0.923, 10], [4, 5, 0.0385, 0.923, 11], [5, 5, 0.0385, 0.923, 12], [8, 5, 0.0385, 0.923, 13], [17, 5, 0.0385, 0.923, 14], [18, 5, 0.0385, 0.923, 15], [19, 5, 0.0385, 0.923, 16], [14, 4, 0.0308, 0.738, 17], [21, 4, 0.0308, 0.738, 18], [23, 4, 0.0308, 0.738, 19], [13, 3, 0.0231, 0.554, 20], [20, 3, 0.0231, 0.554, 21], [22, 3, 0.0231, 0.554, 22], [11, 2, 0.0154, 0.369, 23], [15, 2, 0.0154, 0.369, 24]], "B_full_history": [[9, 83, 0.0484, 1.139, 1], [7, 80, 0.0467, 1.098, 2], [1, 78, 0.0455, 1.07, 3], [11, 77, 0.0449, 1.056, 4], [4, 75, 0.0438, 1.029, 5], [24, 56, 0.0433, 1.247, 6], [6, 74, 0.0432, 1.015, 7], [3, 73, 0.0426, 1.001, 8], [10, 72, 0.042, 0.988, 9], [13, 72, 0.042, 0.988, 10], [15, 71, 0.0414, 0.974, 11], [12, 70, 0.0408, 0.96, 12], [18, 52, 0.0402, 1.158, 13], [19, 52, 0.0402, 1.158, 14], [14, 66, 0.0385, 0.905, 15], [22, 49, 0.0379, 1.092, 16], [8, 63, 0.0368, 0.864, 17], [2, 62, 0.0362, 0.851, 18], [16, 44, 0.034, 0.98, 19], [17, 43, 0.0332, 0.958, 20], [20, 43, 0.0332, 0.958, 21], [5, 55, 0.0321, 0.755, 22], [21, 38, 0.0294, 0.846, 23], [23, 35, 0.027, 0.78, 24]]}, "best_ticket": {"A_current_matrix": [["Powerball", "White 1", 21, 123], ["Powerball", "White 2", 23, 116], ["Powerball", "White 3", 28, 119], ["Powerball", "White 4", 61, 123], ["Powerball", "White 5", 64, 121], ["Powerball", "Powerball", 14, 65], ["Mega Millions", "White 1", 3, 77], ["Mega Millions", "White 2", 10, 84], ["Mega Millions", "White 3", 14, 76], ["Mega Millions", "White 4", 17, 81], ["Mega Millions", "White 5", 31, 79], ["Mega Millions", "Mega Ball", 12, 10]], "B_full_history": [["Powerball", "White 1", 16, 295], ["Powerball", "White 2", 28, 292], ["Powerball", "White 3", 32, 306], ["Powerball", "White 4", 39, 295], ["Powerball", "White 5", 61, 123], ["Powerball", "Powerball", 20, 122], ["Mega Millions", "White 1", 10, 155], ["Mega Millions", "White 2", 11, 151], ["Mega Millions", "White 3", 17, 152], ["Mega Millions", "White 4", 20, 156], ["Mega Millions", "White 5", 31, 155], ["Mega Millions", "Mega Ball", 9, 83]]}};
+
+const POOL_META = {
+  pb_white:{cls:"",  label:"Powerball white", special:false},
+  pb_red:  {cls:"pb",label:"Powerball",       special:true },
+  mm_white:{cls:"",  label:"Mega Millions white", special:false},
+  mm_mb:   {cls:"mm",label:"Mega Ball",       special:true }
+};
+let curCut = "A_current_matrix";
+let curPool = "pb_white";
+
+// heat color from luck score (rate_index)
+function heat(idx){
+  const lo=0.75, hi=1.25;
+  let t=(idx-lo)/(hi-lo); t=Math.max(0,Math.min(1,t));
+  const c1=[63,132,148], c2=[201,194,172], c3=[242,165,22];
+  let a,b,f;
+  if(t<0.5){a=c1;b=c2;f=t/0.5;}else{a=c2;b=c3;f=(t-0.5)/0.5;}
+  const m=(i)=>Math.round(a[i]+(b[i]-a[i])*f);
+  return `rgb(${m(0)},${m(1)},${m(2)})`;
+}
+// row = [number, times, rate, index, rank]
+const N=0,TIMES=1,RATE=2,IDX=3,RANK=4;
+
+/* ---- RATE TRACK (current approach) ---- */
+function buildDebunk(){
+  const rows = DATA.pb_white.A_current_matrix; // current game
+  const total = rows.length; // 69
+  const rateRank={}; rows.forEach(r=>rateRank[r[N]]=r[RANK]);
+  const newest = rows.filter(r=>r[N]>=60).map(r=>r[N]).sort((a,b)=>a-b);
+  const track=document.getElementById('trackRate');
+  const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const balls=[];
+  newest.forEach((num,i)=>{
+    const b=document.createElement('div');
+    b.className='ball miniball'; b.textContent=num;
+    b.dataset.frac = 0.05 + (rateRank[num]-1)/(total-1)*0.90; // true position on the 1–69 scale
+    if(!reduce){
+      b.style.opacity=0; b.style.transform='translate(-50%,-50%) scale(.55)';
+      setTimeout(()=>{
+        b.style.opacity=1; b.style.transform='translate(-50%,-50%) scale(1)';
+      }, 250 + i*80);
+    }
+    track.appendChild(b); balls.push(b);
+  });
+  // spread any balls that would overlap, keeping rank order
+  function layout(){
+    const W=track.clientWidth;
+    const D=parseFloat(getComputedStyle(balls[0]).width)||32;
+    const pad=D/2+5, gap=D+5;
+    const arr=balls.map(b=>({b,c:Math.min(Math.max(parseFloat(b.dataset.frac)*W,pad),W-pad)}))
+                   .sort((a,b)=>a.c-b.c);
+    for(let i=1;i<arr.length;i++) if(arr[i].c-arr[i-1].c<gap) arr[i].c=arr[i-1].c+gap;
+    const over=arr[arr.length-1].c-(W-pad);
+    if(over>0){
+      arr.forEach(a=>a.c-=over);
+      for(let i=1;i<arr.length;i++) if(arr[i].c-arr[i-1].c<gap) arr[i].c=arr[i-1].c+gap;
+      if(arr[0].c<pad) arr[0].c=pad;
+    }
+    arr.forEach(a=>a.b.style.left=a.c+'px');
+  }
+  requestAnimationFrame(layout);
+  addEventListener('resize', layout);
+}
+
+/* ---- BEST TICKET ---- */
+function buildTickets(){
+  const el=document.getElementById('tickets');
+  const rows=DATA.best_ticket[curCut];
+  const games={};
+  rows.forEach(r=>{(games[r[0]]=games[r[0]]||[]).push(r);});
+  el.innerHTML='';
+  [["Powerball","pb","Powerball"],["Mega Millions","mm","Mega Ball"]].forEach(([g,cls,spName])=>{
+    const list=games[g];
+    let balls='';
+    list.forEach(r=>{
+      const isSpecial = r[1]===spName;
+      const bcls = isSpecial ? cls : '';
+      const size = 52;
+      balls += (isSpecial?'<span class="plus">+</span>':'') +
+        `<span class="ball ${bcls}" style="width:${size}px;height:${size}px;font-size:19px">${r[2]}</span>`;
+    });
+    el.insertAdjacentHTML('beforeend',
+      `<div class="ticket"><h3><span class="dot ${cls}"></span>${g}</h3>
+       <div class="row">${balls}</div>
+       <div class="cap">${curCut==='A_current_matrix'?'current game · by draw rate':'all-time · by draw rate'}</div></div>`);
+  });
+}
+
+/* ---- HEAT GRID ---- */
+function buildGrid(){
+  const el=document.getElementById('heat');
+  const meta=POOL_META[curPool];
+  const rows=[...DATA[curPool][curCut]].sort((a,b)=>a[N]-b[N]);
+  const ranks=DATA[curPool][curCut];
+  const maxRank=ranks.length;
+  el.innerHTML='';
+  rows.forEach(r=>{
+    const b=document.createElement('div');
+    b.className='ball '+(meta.special?meta.cls:'');
+    b.tabIndex=0;
+    b.textContent=r[N];
+    if(!meta.special){ b.style.background=`radial-gradient(circle at 32% 28%,#fff 0%, ${heat(r[IDX])} 55%, rgba(0,0,0,.25) 140%)`; b.style.color='#1c211d'; }
+    else { b.style.filter=`saturate(${0.6+ (r[IDX]-0.75)}) brightness(${0.8+(r[IDX]-0.75)*0.5})`; }
+    if(r[RANK]<=3) b.classList.add('rankTop');
+    if(r[RANK]>maxRank-3) b.classList.add('rankBot');
+    b.insertAdjacentHTML('beforeend',`<span class="idx">#${r[RANK]}</span>`);
+    const pct=Math.round((r[IDX]-1)*100);
+    const word = pct>0?`${pct}% more often`:`${Math.abs(pct)}% less often`;
+    const tipHTML=`<div class="${pct>=0?'big':'big u'}">#${r[N]} · ${word}</div>`+
+      `drawn ${r[TIMES]}× · rate ${(r[RATE]*100).toFixed(2)}% · score ${r[IDX].toFixed(2)}`;
+    const show=(e)=>{const t=document.getElementById('tip');t.innerHTML=tipHTML;t.classList.add('on');moveTip(e);};
+    const hide=()=>document.getElementById('tip').classList.remove('on');
+    b.addEventListener('mouseenter',show);
+    b.addEventListener('mousemove',moveTip);
+    b.addEventListener('mouseleave',hide);
+    b.addEventListener('focus',(e)=>{const rect=b.getBoundingClientRect();show({clientX:rect.left+rect.width/2,clientY:rect.top});});
+    b.addEventListener('blur',hide);
+    el.appendChild(b);
+  });
+  document.getElementById('warn').classList.toggle('show', curPool==='mm_mb' && curCut==='A_current_matrix');
+}
+function moveTip(e){const t=document.getElementById('tip');let x=e.clientX+14,y=e.clientY+14;
+  if(x+220>innerWidth)x=e.clientX-224;t.style.left=x+'px';t.style.top=y+'px';}
+
+/* ---- CALLOUTS (current game) ---- */
+function buildCards(){
+  const el=document.getElementById('cards');
+  const spec=(pool,cut)=>DATA[pool][cut];
+  const pbw=spec('pb_white','A_current_matrix');
+  const mmw=spec('mm_white','A_current_matrix');
+  const pbr=spec('pb_red','A_current_matrix');
+  const top=(arr)=>arr[0];
+  const bot=(arr)=>arr[arr.length-1];
+  const pctw=(idx)=>Math.round(Math.abs(idx-1)*100);
+  const items=[
+    {n:top(pbw)[N],cls:'',    txt:`Luckiest <b>Powerball white</b> — hits about <b>${pctw(top(pbw)[IDX])}% more</b> than average.`,meta:`drawn ${top(pbw)[TIMES]}× since 2015`},
+    {n:bot(pbw)[N],cls:'u',   txt:`Coldest <b>Powerball white</b> — about <b>${pctw(bot(pbw)[IDX])}% less</b> than average.`,meta:`drawn ${bot(pbw)[TIMES]}× since 2015`},
+    {n:top(mmw)[N],cls:'',    txt:`Luckiest <b>Mega Millions white</b> — about <b>${pctw(top(mmw)[IDX])}% more</b> than average.`,meta:`drawn ${top(mmw)[TIMES]}× since 2017`},
+    {n:top(pbr)[N],cls:'',    txt:`Luckiest <b>red Powerball</b> — about <b>${pctw(top(pbr)[IDX])}% more</b> than average.`,meta:`drawn ${top(pbr)[TIMES]}× since 2015`}
+  ];
+  el.innerHTML=items.map(i=>
+    `<div class="card"><div class="n ${i.cls}">${i.n}</div><p>${i.txt}</p><div class="meta">${i.meta}</div></div>`).join('');
+}
+
+/* ---- WIRE UP ---- */
+document.querySelectorAll('#cutSeg button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#cutSeg button').forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true'); curCut=b.dataset.cut; buildTickets(); buildGrid();
+}));
+document.querySelectorAll('#poolSeg button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#poolSeg button').forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true'); curPool=b.dataset.pool; buildGrid();
+}));
+
+buildDebunk(); buildTickets(); buildGrid(); buildCards();
+</script>
